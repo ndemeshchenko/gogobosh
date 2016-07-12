@@ -159,6 +159,7 @@ func (c *Client) GetDeploymentVMs(name string) (vms []VM, err error) {
 		log.Printf("Error reading deployment vms request %v", resBody)
 		return
 	}
+	fmt.Println(string(resBody))
 	err = json.Unmarshal(resBody, &task)
 	if err != nil {
 		log.Printf("Error unmarshaling tasks %v", err)
