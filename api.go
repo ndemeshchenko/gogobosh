@@ -148,7 +148,7 @@ func (c *Client) CreateDeployment(manifest string) (task Task, err error) {
 // GetDeploymentVMs from given BOSH
 func (c *Client) GetDeploymentVMs(name string) (vms []VM, err error) {
 	var task Task
-	r := c.NewRequest("GET", "/deployments/"+name+"/vms") // ?format=full
+	r := c.NewRequest("GET", "/deployments/"+name+"/vms?format=full")
 	resp, err := c.DoRequest(r)
 	if err != nil {
 		log.Printf("Error requesting deployment vms %v", err)
