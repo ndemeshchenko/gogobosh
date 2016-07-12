@@ -109,7 +109,6 @@ func (c *Client) DoRequest(r *request) (*http.Response, error) {
 	req.SetBasicAuth(c.config.Username, c.config.Password)
 	req.Header.Add("User-Agent", "gogo-bosh")
 	resp, err := c.config.HttpClient.Do(req)
-	fmt.Println(resp)
 	return resp, err
 }
 
