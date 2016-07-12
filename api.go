@@ -1,6 +1,7 @@
 package gogobosh
 
 import (
+	"fmt"
 	"bytes"
 	"encoding/json"
 	"io/ioutil"
