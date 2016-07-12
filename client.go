@@ -94,6 +94,7 @@ func (c *Client) NewRequest(method, path string) *request {
 		params: make(map[string][]string),
 		header: make(map[string]string),
 	}
+	fmt.Println(r.params)
 	return r
 }
 
